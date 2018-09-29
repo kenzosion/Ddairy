@@ -1,3 +1,20 @@
-<mat-toolbar class="custom" color="primary">
-  <h1 class="custom mt-5 ml-5">D Notes</h1>
+<mat-toolbar color="primary" class="header">
+  <span>
+    <a routerLink="/" class="h2">D-diary</a>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink="/create" routerLinkActive="mat-accent" class="h6">Create a diary</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/auth/login" routerLinkActive="mat-accent" class="h6">Login</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/auth/signup" routerLinkActive="mat-accent" class="h6">Signup</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button mat-button (click)="onLogout()" class="h6" >Logout</button>
+    </li>
+  </ul>
 </mat-toolbar>

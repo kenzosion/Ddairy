@@ -1,12 +1,13 @@
 <app-header></app-header>
-<main class="container">
-  <div class="row">
-      <div class="col-md-6">
-          <app-post-create></app-post-create>
-          <app-post-list></app-post-list>
-      </div>
-      <div class="col-md-6 ml-auto">
-          <img class="backimg sticky-top" src="https://images.pexels.com/photos/261705/pexels-photo-261705.jpeg" alt="diary pic">
-      </div>
-  </div>
+<main class="row">
+    <div class="col-md-6">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-6 ml-auto">
+        <img class="backimg position-sticky" src="https://images.pexels.com/photos/743/purple-spring-flower-lilac.jpg" alt="diary pic">
+        <div class="col align-self-end bg-dark mt-2 p-2 text-white text-center">
+            Memories start here
+        </div>
+    </div>
 </main>
+<!-- <app-error *ngIf="hasError"></app-error> -->
