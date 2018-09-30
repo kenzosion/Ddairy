@@ -19,4 +19,5 @@ ul {
 
 .header {
   height: 100px;
+  background-image: linear-gradient(to right, rgb(20, 13, 26), rgb(183, 30, 243));
  }
